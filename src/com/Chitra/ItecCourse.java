@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class ItecCourse
 {
+    // variables defined for the class
         String name;
         int code;
         ArrayList<String> students;
         int maxStudents;
         String RoomNumber;
-
+        Integer FreeSpace;
+    // a constructor class to
     ItecCourse(String courseName, int courseCode, int courseMaxStudents,String roomNumber)
     {
         this.name = courseName;
@@ -18,6 +20,8 @@ public class ItecCourse
         this.maxStudents = courseMaxStudents;
         this.RoomNumber = roomNumber;
     }
+
+
 
     public String getRoomNumber()
     {
@@ -61,13 +65,23 @@ public class ItecCourse
         System.out.println("There are " + getNumberOfStudents() + " students enrolled");
         System.out.println("The max number of students for this course is  " + this.maxStudents);
             System.out.println("The room Number for " + name + " course is " + getRoomNumber());
+            //System.out.println("The free space available for " + this.name + " is " + getSpaceAvailable(maxStudents,getNumberOfStudents()));
             System.out.println("********************************************************************");
+
     }
 
         int getNumberOfStudents()
         {
         return this.students.size();
     }
+    public int getSpaceAvailable(Integer maxStudents,Integer NumberofStudents)
+
+    {
+        FreeSpace = maxStudents-NumberofStudents;
+        return FreeSpace;
+
+    }
+
 
 
 }
