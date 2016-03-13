@@ -1,7 +1,7 @@
 package com.Chitra;
 
 import java.util.ArrayList;
-
+// a class which has methods and variables initialized and declared
 public class ItecCourse
 {
     // variables defined for the class
@@ -11,18 +11,18 @@ public class ItecCourse
         int maxStudents;
         String RoomNumber;
         Integer FreeSpace;
-    // a constructor class to
+    // a constructor class to create objects from this class
     ItecCourse(String courseName, int courseCode, int courseMaxStudents,String roomNumber)
     {
         this.name = courseName;
         this.code = courseCode;
         this.students = new ArrayList<String>();
         this.maxStudents = courseMaxStudents;
-        this.RoomNumber = roomNumber;
+        this.RoomNumber = roomNumber;  // added new variable
     }
 
 
-
+// getter and setter for roomNumber variable
     public String getRoomNumber()
     {
         return RoomNumber;
@@ -33,6 +33,7 @@ public class ItecCourse
         RoomNumber = roomNumber;
     }
 
+// user defined method to add students
     void addStudent(String studentName)
     {
         if ( students== null)
@@ -41,6 +42,7 @@ public class ItecCourse
         }
         students.add(studentName);
     }
+    // user defined method to remove students
     void removeStudent(String studentName)
     {
         if (students.contains(studentName))
@@ -51,8 +53,7 @@ public class ItecCourse
             System.out.println(studentName + " was not found in " + this.name);
         }
     }
-
-
+        // method to print info
     void writeCourseInfo()
         {
         System.out.println("Course Name: " + this.name);
@@ -64,16 +65,17 @@ public class ItecCourse
         }
         System.out.println("There are " + getNumberOfStudents() + " students enrolled");
         System.out.println("The max number of students for this course is  " + this.maxStudents);
-            //System.out.println("The room Number for " + name + " course is " + getRoomNumber());
             //System.out.println("The free space available for " + this.name + " is " + getSpaceAvailable(maxStudents,getNumberOfStudents()));
             System.out.println("********************************************************************");
 
     }
+    // a method to get student's size
 
         int getNumberOfStudents()
         {
         return this.students.size();
     }
+    // a method to calculate free space available
     public int getSpaceAvailable(Integer maxStudents,Integer NumberofStudents)
 
     {
@@ -81,8 +83,5 @@ public class ItecCourse
         return FreeSpace;
 
     }
-
-
-
 }
 
