@@ -64,7 +64,7 @@ public class ItecCourse
         }
         System.out.println("There are " + getNumberOfStudents() + " students enrolled");
         System.out.println("The max number of students for this course is  " + this.maxStudents);
-            System.out.println("The room Number for " + name + " course is " + getRoomNumber());
+            //System.out.println("The room Number for " + name + " course is " + getRoomNumber());
             //System.out.println("The free space available for " + this.name + " is " + getSpaceAvailable(maxStudents,getNumberOfStudents()));
             System.out.println("********************************************************************");
 
