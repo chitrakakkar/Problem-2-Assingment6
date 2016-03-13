@@ -8,9 +8,9 @@ public class ItecCourse
         int code;
         ArrayList<String> students;
         int maxStudents;
-        Integer RoomNumber;
+        String RoomNumber;
 
-    ItecCourse(String courseName, int courseCode, int courseMaxStudents,Integer roomNumber)
+    ItecCourse(String courseName, int courseCode, int courseMaxStudents,String roomNumber)
     {
         this.name = courseName;
         this.code = courseCode;
@@ -19,12 +19,12 @@ public class ItecCourse
         this.RoomNumber = roomNumber;
     }
 
-    public Integer getRoomNumber()
+    public String getRoomNumber()
     {
         return RoomNumber;
     }
 
-    public void setRoomNumber(Integer roomNumber)
+    public void setRoomNumber(String roomNumber)
     {
         RoomNumber = roomNumber;
     }
