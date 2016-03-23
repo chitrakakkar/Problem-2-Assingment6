@@ -10,7 +10,8 @@ public class ItecCourse
         ArrayList<String> students;
         int maxStudents;
         String RoomNumber;
-        Integer FreeSpace;
+        int FreeSpace;    //Use int unless you know you need object properties
+        
     // a constructor class to create objects from this class
     ItecCourse(String courseName, int courseCode, int courseMaxStudents,String roomNumber)
     {
@@ -71,15 +72,17 @@ public class ItecCourse
     }
     // a method to get student's size
 
-        int getNumberOfStudents()
-        {
+    int getNumberOfStudents()
+    {
         return this.students.size();
     }
-    // a method to calculate free space available
-    public int getSpaceAvailable(Integer maxStudents,Integer NumberofStudents)
+    // a method to calculate free space available This should work with data that the object already knows - you can
+    // figure out the number of students from the size of the sudents ArrayList
+    
+    public int getSpaceAvailable()
 
     {
-        FreeSpace = maxStudents-NumberofStudents;
+        FreeSpace = maxStudents- students.size();
         return FreeSpace;
 
     }
